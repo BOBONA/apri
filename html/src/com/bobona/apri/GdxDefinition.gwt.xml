@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit trunk//EN" "http://google-web-toolkit.googlecode.com/svn/trunk/distro-source/core/src/gwt-module.dtd">
+<module rename-to="html">
+	<inherits getName='com.badlogic.gdx.backends.gdx_backends_gwt' />
+	<inherits getName='com.badlogic.gdx.physics.box2d.box2d-gwt' />
+	<inherits getName='Box2DLights' />
+
+	<inherits getName='apri' />
+	<entry-point class='com.bobona.apri.client.HtmlLauncher' />
+	<set-configuration-property getName='xsiframe.failIfScriptTag' value='FALSE'/>
+	<set-configuration-property getName="gdx.assetpath" value="../android/assets" />
+</module>

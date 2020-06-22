@@ -1,0 +1,6 @@
+{
+  paddingX: 0,
+  paddingY: 0,
+  maxWidth: 16384,
+  maxHeight: 16384
+}

@@ -1,0 +1,69 @@
+
+atlas.png
+size: 4096,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+black
+  rotate: false
+  xy: 3648, 604
+  size: 420, 420
+  orig: 420, 420
+  offset: 0, 0
+  index: -1
+black_outline
+  rotate: false
+  xy: 2048, 224
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
+carrot_crop
+  rotate: false
+  xy: 2048, 208
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: 1
+carrot_crop
+  rotate: false
+  xy: 3648, 588
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: 2
+carrot_crop
+  rotate: false
+  xy: 4068, 1008
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: 3
+carrot_crop
+  rotate: false
+  xy: 2048, 192
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: 4
+dirt
+  rotate: false
+  xy: 0, 0
+  size: 1024, 1024
+  orig: 1024, 1024
+  offset: 0, 0
+  index: -1
+lava_stone
+  rotate: false
+  xy: 1024, 0
+  size: 1024, 1024
+  orig: 1024, 1024
+  offset: 0, 0
+  index: -1
+notfound
+  rotate: false
+  xy: 2848, 224
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1

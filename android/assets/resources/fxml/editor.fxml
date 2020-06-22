@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bobona.animationMaker.controllers.EditorController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane fx:id="root" dividerPositions="0.7241379310344828" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <SplitPane dividerPositions="0.7416396979503775" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane fx:id="canvasPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <Canvas fx:id="canvas" height="100.0" width="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                                    <children>
+                                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <HBox>
+                                                    <children>
+                                                        <Label text="Frames " />
+                                                        <Button fx:id="playFrames" mnemonicParsing="false" text="Play">
+                                                            <font>
+                                                                <Font size="8.0" />
+                                                            </font>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <ListView fx:id="frames" editable="true" prefHeight="1000000.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                    <children>
+                        <SplitPane dividerPositions="0.7038834951456311" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <HBox>
+                                                    <children>
+                                                        <Label text="Polygons " HBox.hgrow="ALWAYS" />
+                                                        <Button mnemonicParsing="false" onMouseClicked="#addPolygon" text="+">
+                                                            <font>
+                                                                <Font size="7.0" />
+                                                            </font>
+                                                        </Button>
+                                                        <Button mnemonicParsing="false" onMouseClicked="#removePolygon" text="-">
+                                                            <font>
+                                                                <Font size="7.0" />
+                                                            </font>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                                             <children>
+                                                            <VBox fx:id="polygons" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox fx:id="shapeData" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <HBox VBox.vgrow="NEVER">
+                                                    <children>
+                                          <TextField fx:id="name" prefWidth="100000.0" />
+                                                        <ChoiceBox fx:id="shape" prefWidth="100000.0" HBox.hgrow="ALWAYS" />
+                                                    </children>
+                                                </HBox>
+                                    <HBox spacing="10.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Label text="Width" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="width" prefWidth="25.0" HBox.hgrow="ALWAYS" />
+                                          <Label text="Height" />
+                                          <TextField fx:id="height" prefWidth="25.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="4.0">
+                                       <children>
+                                          <Label text="X" />
+                                          <TextField prefWidth="50.0" HBox.hgrow="ALWAYS" fx:id="x" />
+                                          <Label text="Y" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="y" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                          <Label text="Rotation" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="rotation" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</VBox>

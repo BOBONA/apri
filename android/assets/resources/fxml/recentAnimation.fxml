@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="100.0" />
+    <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints valignment="CENTER" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="title" text="Title" textOverrun="CLIP" />
+      <Label fx:id="path" maxWidth="200.0" text="Location" GridPane.rowIndex="1" />
+      <Button fx:id="remove" mnemonicParsing="false" text="X" GridPane.columnIndex="1" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+   </padding>
+</GridPane>

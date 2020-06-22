@@ -1,0 +1,11 @@
+<Root>
+    <RelativeContainer>
+        <RelativeContainer alignment="top_left" x="0" y="1" width="0.3" height="0.1">
+            <Overlay x="0" y="0" width="1" height="1">
+                <LinearDisplay path="lava_stone.png" percent_property="health_bar_percent" method="stretch"/>
+                <Image path="black_outline.png"/>
+            </Overlay>
+            <TextNode x="0.5" y="0.5" width="1" height="1" alignment="center" font="comfortaa" text_property="health" r="1" g="202" b="252" a="1"/>
+        </RelativeContainer>
+    </RelativeContainer>
+</Root>

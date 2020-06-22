@@ -1,0 +1,31 @@
+{
+  "name": "Default",
+  "layers": [
+    {
+      "name": "visual",
+      "shapes": [
+        {
+          "name": "main",
+          "width": 1,
+          "height": 1
+        }
+      ],
+      "frames": [
+        {
+          "duration": 1,
+          "transforms": [
+            {
+              "name": "main",
+              "scaleX": 1,
+              "scaleY": 1,
+              "rot": 0,
+              "origin": "true",
+              "x": 0,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
